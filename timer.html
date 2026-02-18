@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Music Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f2f5;
+    }
+    #timer {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    input, button {
+      font-size: 1.2em;
+      padding: 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Custom Timer</h1>
+  <div id="timer">00:00</div>
+  <input type="number" id="minutes" placeholder="Enter minutes" />
+  <button onclick="startTimer()">Start</button>
+  <button onclick="stopTimer()">Stop</button>
+
+  <!-- Hidden audio element -->
+  <audio id="alarmAudio" src="/Audio/samagavaragamana.mp3" preload="auto"></audio>
+
+  <script>
+    let countdown;
+    function startTimer() {
+      const minutes = parseInt(document.getElementById('minutes').value);
+      if (isNaN(minutes) || minutes <= 0) {
+        alert("Please enter a valid number of minutes.");
+        return;
+      }
+
+      clearInterval(countdown);
+      const timerDisplay = document.getElementById('timer');
+      let totalSeconds = minutes * 60;
+
+      countdown = setInterval(() => {
+        const mins = Math.floor(totalSeconds / 60);
+        const secs = totalSeconds % 60;
+        timerDisplay.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        if (totalSeconds <= 0) {
+          clearInterval(countdown);
+          document.getElementById('alarmAudio').play();
+        }
+        totalSeconds--;
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(countdown);
+      document.getElementById('alarmAudio').pause();
+      document.getElementById('alarmAudio').currentTime = 0;
+    }
+  </script>
+</body>
+</html>
