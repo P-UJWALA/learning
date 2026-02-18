@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.Infopage {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    animation: slideIn 0.5s ease-out;
+    transition: all 0.3s ease;
+}
+
+.Infopage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.Infopage--1 {
+    margin-top: 20px;
+}
+
+.first button {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.first button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.first button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.second input {
+    padding: 12px 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.second input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    background-color: #f8f9ff;
+    transform: translateY(-2px);
+}
+
+.third {
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.third:hover {
+    transform: translateX(5px);
+}
+
+.third input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #667eea;
+    width: 18px;
+    height: 18px;
+}
+
+.third label {
+    cursor: pointer;
+}
+
+.third span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+p {
+    color: #667eea;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+p:hover {
+    color: #764ba2;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+span {
+    display: block;
+    margin-bottom: 10px;
+    color: #999;
+    font-weight: 500;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.social-buttons button {
+    flex: 1;
+    min-width: calc(50% - 5px);
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.social-buttons button:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(102, 126, 234, 0.2);
+}
+
+.social-buttons button:active {
+    transform: translateY(-1px);
+}
+
+.policy {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.policy span {
+    color: #667eea;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.policy span:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
